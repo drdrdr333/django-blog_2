@@ -46,7 +46,7 @@ class FrontEndTestCase(TestCase):
         resp = self.client.get('/')
         # the content of the rendered response is always a bytestring
         resp_text = resp.content.decode(resp.charset)
-        self.assertTrue("New Post Title" in resp_text)
+        self.assertTrue("Much cooler title" in resp_text)
         # helper = Post.objects.all()
         # print(helper)
         for count in range(1, 11):
